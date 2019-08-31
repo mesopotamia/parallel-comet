@@ -2,21 +2,20 @@
 title: Home
 sections:
   - type: heroblock
-    title: 'Hi, I''m Stackbit Exto Portfolio Theme.'
+    title: 'Hi, We are Forefront.'
     section_id: hero
     component: HeroBlock
     content: >-
-      This section can contain a subtitle or tagline. The recommended length is
-      one to three sentences, but can be changed as you prefer.
-  - type: portfolioblock
-    title: Recent Work
-    section_id: latest-projects
-    component: PortfolioBlock
-    subtitle: An optional subtitle of the section
-    layout_style: mosaic
-    num_projects_displayed: 6
-    view_all_text: View All
-    view_all_url: portfolio/index.html
+      Our focus is on building the BEST Frontend solutions and nothing else.
+  #- type: portfolioblock
+  #  title: Recent Work
+  #  section_id: latest-projects
+  #  component: PortfolioBlock
+  #  subtitle: An optional subtitle of the section
+  #  layout_style: mosaic
+  #  num_projects_displayed: 6
+  #  view_all_text: View All
+  #  view_all_url: portfolio/index.html
   - type: servicesblock
     title: What We Do
     section_id: services
