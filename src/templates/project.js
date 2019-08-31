@@ -1,0 +1,36 @@
+import React from 'react';
+import _ from 'lodash';
+
+import {Layout} from '../components/index';
+import {htmlToReact, safePrefix} from '../utils';
+
+export default class Project extends React.Component {
+    render() {
+        return (
+            <Layout {...this.props}>
+            <div class="outer">
+              <div class="inner">
+                <article class="post project post-full">
+                  <header class="post-header inner-small">
+                    <h1 class="post-title line-top">{_.get(this.props, 'pageContext.frontmatter.title')}</h1>
+                    {_.get(this.props, 'pageContext.frontmatter.subtitle') && 
+                    <div class="post-subtitle">
+                      {htmlToReact(_.get(this.props, 'pageContext.frontmatter.subtitle'))}
+                    </div>
+                    }
+                  </header>
+                  {_.get(this.props, 'pageContext.frontmatter.content_img_path') && 
+                  <div class="post-thumbnail">
+                    <img src={safePrefix(_.get(this.props, 'pageContext.frontmatter.content_img_path'))} alt={_.get(this.props, 'pageContext.frontmatter.title')} />
+                  </div>
+                  }
+                  <div class="post-content inner-small">
+                    {htmlToReact(_.get(this.props, 'pageContext.html'))}
+                  </div>
+                </article>
+              </div>
+            </div>
+            </Layout>
+        );
+    }
+}
